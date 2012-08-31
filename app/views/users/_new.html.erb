@@ -1,0 +1,17 @@
+<%= form_for @user, :remote => true do |f| %>
+  <br />
+  <p>
+    First Name:
+    <%= f.text_field :first_name %><br />
+  </p>
+  <p>
+    Last Name:
+    <%= f.text_field :last_name %><br />
+  </p>
+  <p>
+    Email:
+    <%= f.text_field :email %><br />
+  </p>
+  <%= f.submit 'Add User' %>
+
+<% end %>

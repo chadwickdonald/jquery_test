@@ -1,0 +1,36 @@
+<h1>Users</h1>
+
+
+<%= link_to "(+) Add User", new_user_path, :remote => true, class: "user-button" %>
+<div class="add_user"></div>
+
+<br/>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<tr class="users">
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.first_name %></td>
+    <td><%= user.last_name %></td>
+    <td><%= user.email %></td>
+<!--    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+-->  
+  </tr> 
+<% end %>
+</tr>
+</table>
+<br/>
+<%= paginate @users %>
+
+ 
